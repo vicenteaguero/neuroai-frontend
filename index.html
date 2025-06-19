@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>NeuroAI</title>
+    <link rel="icon" href="assets/img/ir_logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/base.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>NeuroAI</h1>
+
+        <p class="project-description">
+            NeuroAI is a lightweight platform for automated brain
+            MRI analysis using deep learning. Users upload a NIfTI
+            (`.nii.gz`) file, which is rendered immediately and sent
+            to a GPU-powered segmentation model for processing.
+
+            The backend API manages communication with the model
+            and polls asynchronously until the prediction is ready.
+            Once complete, the tumor mask is retrieved and overlaid
+            on the original scan for direct visual comparison.
+
+            The entire system is modular and deployable on minimal
+            infrastructure, including static web hosting.
+        </p>
+
+
+
+        <section id="upload-zone">
+            <label for="nii-upload" class="file-label">Choose File</label>
+            <input type="file" id="nii-upload" accept=".nii,.nii.gz">
+            <button id="upload-btn">Upload</button>
+        </section>
+
+        <section id="viewer-zone">
+            <div id="viewer-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="assets/img/ir_full_logo.png" alt="Logo" class="footer-logo">
+        <div class="footer-text">
+            <p>This software is open-source under the MIT License.</p>
+            <p>This project is part of the 2025 InterRussia Fellowship Program.</p>
+            <p>Uploaded files are processed in a non-secure environment. Do not submit confidential or private data.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/viewer.js"></script>
+</body>
+
+</html>
