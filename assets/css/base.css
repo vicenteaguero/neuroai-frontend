@@ -1,0 +1,152 @@
+/* assets/css/base.css */
+
+:root {
+    --padding-normal: 50px;
+    --color-red: #b32a4b;
+    --color-black: #191919;
+    --color-white: #ffffff;
+    --font: 'StapelOnest', Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2,
+p {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+}
+
+h1 {
+    color: var(--color-red);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.2;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2lh;
+    width: 100%;
+    max-width: 800px;
+    margin: var(--padding-normal) 0;
+}
+
+#upload-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (min-width: 600px) {
+    #upload-zone {
+        flex-direction: row;
+    }
+}
+
+#upload-btn {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    padding: 0.75em 2em;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#upload-btn:hover {
+    background-color: var(--color-red);
+}
+
+#viewer-container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    min-width: 300px;
+    border: 2px solid var(--color-red);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-black);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 0.6em 1.2em;
+    font-weight: 600;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: clamp(1rem, 2.5vw, 1rem);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.file-label:hover {
+    background-color: var(--color-white);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--color-black);
+    padding: var(--padding-normal);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    border-top: 1px solid var(--color-red);
+}
+
+.footer-logo {
+    padding: 0 var(--padding-normal);
+    height: 60px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+    gap: 0.5rem;
+    color: var(--color-white);
+}
+
+.project-description {
+    max-width: 600px;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-block: 1lh;
+    padding: 0 1rem;
+}
