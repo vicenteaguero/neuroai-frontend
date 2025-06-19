@@ -1,6 +1,8 @@
 {
     "conventionalCommits.scopes": [
         "general",
-        "streamlit"
+        "streamlit",
+        "web",
+        "js"
     ]
 }
